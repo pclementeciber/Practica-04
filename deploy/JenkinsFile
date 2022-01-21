@@ -9,6 +9,7 @@ pipeline {
         stage('Build de docker'){
             steps {
                 sh 'cd deploy'
+                sh 'ls -la'
                 sh 'docker build -t web:latest .'
             }
         }
