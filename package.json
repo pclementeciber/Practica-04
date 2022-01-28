@@ -1,0 +1,13 @@
+{
+  "name": "Practica4",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "web.js",
+  "scripts": {
+    "start": "node web.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
