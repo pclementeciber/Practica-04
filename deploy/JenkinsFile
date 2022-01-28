@@ -11,5 +11,11 @@ pipeline {
                 sh 'docker build -t web:latest .'
             }
         }
+        stage('rename and upload '){
+            steps {
+                sh 'docker image tag web:latest registry.pps.local:5000/web:latest && \
+                docker push registry.pps.local:5000/web:latest'
+            }
+        }
     }
 }
