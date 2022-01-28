@@ -17,5 +17,11 @@ pipeline {
                 docker push registry.pps.local:5000/web:latest'
             }
         }
+        stage('launch service web'){
+            steps {
+                sh 'docker service create --publish 80:3000 --name webDev  --replicas 3 registry.pps.local:5000/web:latest'
+            }
+        }
+        
     }
 }
